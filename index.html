@@ -287,7 +287,7 @@ body.open.scrolled .back{translate:-50% 0;opacity:1;pointer-events:auto}
 .back .txt span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 
 footer{text-align:center;font-size:11px;color:var(--mute);letter-spacing:.06em;display:grid;gap:4px;padding-bottom:12px}
-.flogo{position:relative;display:grid;justify-items:center;padding-top:8px;margin-bottom:clamp(64px,20vw,92px)}
+.flogo{position:relative;display:grid;justify-items:center;padding-top:8px;margin-bottom:22px}
 .flogo-in{width:min(82vw,360px);animation:float 6s ease-in-out infinite}
 .flogo-in svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 10px 18px rgba(0,0,0,.6))}
 .flogo-shadow{position:absolute;top:calc(min(82vw,360px) * 280 / 520 + 4px);width:min(64vw,280px);height:18px;border-radius:50%;
@@ -373,7 +373,7 @@ footer .brand{font-family:var(--f-display);letter-spacing:.2em;color:var(--alu);
   <div class="reflect card-reflect" aria-hidden="true"><div class="reflect-in" id="cardRefl"></div></div>
 
   <section class="content" id="content" hidden aria-label="Información de contacto">
-    <div class="flogo" style="--d:0" aria-hidden="true"><div class="flogo-in" id="flogo"></div><span class="flogo-shadow"></span><div class="reflect logo-reflect"><div class="reflect-in" id="flogoRefl"></div></div></div>
+    <div class="flogo" style="--d:0" aria-hidden="true"><div class="flogo-in" id="flogo"></div></div>
     <div class="hero" style="--d:1">
       <div class="years"><strong>+20</strong><span>años de<br>experiencia</span></div>
       <h1>Especialistas en fabricación e instalación de productos de aluminio y vidrio</h1>
@@ -611,8 +611,6 @@ footer .brand{font-family:var(--f-display);letter-spacing:.2em;color:var(--alu);
     c.innerHTML=c.innerHTML.replace(/gGold/g,'fGold').replace(/gPlat/g,'fPlat');
     document.getElementById('flogo').appendChild(c);
     // reflejo del logo interior
-    var r=c.cloneNode(true); r.innerHTML=r.innerHTML.replace(/fGold/g,'rGold').replace(/fPlat/g,'rPlat');
-    document.getElementById('flogoRefl').appendChild(r);
     // reflejo de la tarjeta de inicio (estado final, estático)
     var k=card.cloneNode(true); k.removeAttribute('id'); k.className='card done';
     k.querySelectorAll('[id]').forEach(function(el){ el.removeAttribute('id'); });
